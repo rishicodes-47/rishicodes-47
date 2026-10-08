@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cars & Their Attributes | BCA 5th Semester</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Segoe UI",Arial,sans-serif}
+html{scroll-behavior:smooth}
+body{background:#090909;color:#f5f5f5;line-height:1.6}
+header{min-height:430px;display:flex;justify-content:center;align-items:center;text-align:center;padding:60px 20px;position:relative;overflow:hidden;background:radial-gradient(circle at 20% 30%,rgba(230,57,70,.18),transparent 30%),radial-gradient(circle at 80% 70%,rgba(230,57,70,.12),transparent 30%),linear-gradient(135deg,#111,#050505)}
+header:before{content:"";position:absolute;width:500px;height:500px;border:1px solid rgba(230,57,70,.2);border-radius:50%;right:-180px;top:-180px}
+header:after{content:"";position:absolute;width:350px;height:350px;border:1px solid rgba(230,57,70,.15);border-radius:50%;left:-150px;bottom:-180px}
+.hero{position:relative;z-index:2;max-width:850px}
+.tag{display:inline-block;padding:7px 18px;border:1px solid #e63946;border-radius:30px;color:#ff5964;font-size:.85rem;letter-spacing:2px;margin-bottom:22px;text-transform:uppercase}
+header h1{font-size:clamp(2.5rem,6vw,5rem);line-height:1.05;letter-spacing:-2px;margin-bottom:20px}
+header h1 span{color:#e63946}
+header p{color:#aaa;font-size:1.15rem;max-width:650px;margin:auto}
+nav{position:sticky;top:0;z-index:10;background:rgba(12,12,12,.92);backdrop-filter:blur(12px);border-bottom:1px solid #292929;padding:15px 20px;text-align:center}
+nav a{color:#aaa;text-decoration:none;margin:0 15px;font-size:.9rem;transition:.3s}
+nav a:hover{color:#e63946}
+.container{max-width:1200px;margin:auto;padding:80px 25px}
+.section-heading{text-align:center;margin-bottom:55px}
+.section-heading small{color:#e63946;text-transform:uppercase;letter-spacing:3px;font-weight:600}
+.section-heading h2{font-size:2.5rem;margin-top:8px}
+.section-heading p{color:#888;margin-top:10px}
+.cars-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px}
+.car-card{position:relative;overflow:hidden;background:linear-gradient(145deg,#181818,#101010);border:1px solid #292929;border-radius:18px;transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease}
+.car-card:before{content:"";position:absolute;height:3px;width:0;left:0;top:0;background:#e63946;transition:width .4s ease}
+.car-card:hover{transform:translateY(-10px);border-color:#e63946;box-shadow:0 20px 50px rgba(230,57,70,.12)}
+.car-card:hover:before{width:100%}
+.car-header{padding:25px;border-bottom:1px solid #292929;background:linear-gradient(135deg,rgba(230,57,70,.15),transparent)}
+.car-number{color:#e63946;font-size:.75rem;letter-spacing:2px;font-weight:bold}
+.car-header h3{font-size:1.55rem;margin-top:5px}
+.car-type{color:#777;font-size:.85rem;margin-top:3px}
+.car-body{padding:22px 25px 25px}
+.attribute{display:flex;justify-content:space-between;gap:15px;padding:12px 0;border-bottom:1px solid #262626;font-size:.92rem}
+.attribute:last-child{border-bottom:none}
+.attribute .label{color:#777}
+.attribute .value{color:#f2f2f2;font-weight:600;text-align:right}
+.highlight{margin-top:70px;padding:35px;border-radius:18px;background:linear-gradient(120deg,rgba(230,57,70,.14),rgba(255,255,255,.02));border:1px solid #292929;text-align:center}
+.highlight h2{font-size:1.8rem;margin-bottom:10px}
+.highlight p{color:#999;max-width:700px;margin:auto}
+footer{border-top:1px solid #292929;background:#0d0d0d;text-align:center;padding:45px 20px}
+footer .developed{color:#777;font-size:.9rem;margin-bottom:5px}
+footer .names{color:#e63946;font-size:1.35rem;font-weight:700}
+footer .course{color:#aaa;margin-top:8px}
+footer .github{color:#555;font-size:.8rem;margin-top:18px}
+@media(max-width:600px){header{min-height:380px}header h1{font-size:2.7rem}header p{font-size:1rem}nav a{margin:0 7px;font-size:.8rem}.container{padding:55px 18px}.section-heading h2{font-size:2rem}.cars-grid{grid-template-columns:1fr}.highlight{padding:25px 18px}}
+</style>
+</head>
+<body>
+<header>
+<div class="hero">
+<div class="tag">BCA 5th Semester</div>
+<h1>Cars & <span>Their Attributes</span></h1>
+<p>Explore popular cars and compare their key specifications, performance, engine details, transmission and seating capacity.</p>
+</div>
+</header>
+
+<nav>
+<a href="#cars">Cars</a>
+<a href="#about">About</a>
+</nav>
+
+<main class="container" id="cars">
+<div class="section-heading">
+<small>Automotive Collection</small>
+<h2>Featured Cars</h2>
+<p>A simple comparison of popular cars and their important attributes.</p>
+</div>
+
+<div class="cars-grid">
+
+<div class="car-card">
+<div class="car-header"><div class="car-number">01 / SUV</div><h3>Toyota Fortuner</h3><div class="car-type">Premium SUV</div></div>
+<div class="car-body">
+<div class="attribute"><span class="label">Engine</span><span class="value">2.8L Diesel</span></div>
+<div class="attribute"><span class="label">Power</span><span class="value">204 bhp</span></div>
+<div class="attribute"><span class="label">Torque</span><span class="value">500 Nm</span></div>
+<div class="attribute"><span class="label">Transmission</span><span class="value">6-Speed Automatic</span></div>
+<div class="attribute"><span class="label">Fuel</span><span class="value">Diesel</span></div>
+<div class="attribute"><span class="label">Seating</span><span class="value">7 Seater</span></div>
+</div></div>
+
+<div class="car-card">
+<div class="car-header"><div class="car-number">02 / SUV</div><h3>Hyundai Creta</h3><div class="car-type">Compact SUV</div></div>
+<div class="car-body">
+<div class="attribute"><span class="label">Engine</span><span class="value">1.5L Petrol</span></div>
+<div class="attribute"><span class="label">Power</span><span class="value">115 bhp</span></div>
+<div class="attribute"><span class="label">Torque</span><span class="value">144 Nm</span></div>
+<div class="attribute"><span class="label">Transmission</span><span class="value">IVT / Manual</span></div>
+<div class="attribute"><span class="label">Fuel</span><span class="value">Petrol</span></div>
+<div class="attribute"><span class="label">Seating</span><span class="value">5 Seater</span></div>
+</div></div>
+
+<div class="car-card">
+<div class="car-header"><div class="car-number">03 / OFF-ROAD</div><h3>Mahindra Thar</h3><div class="car-type">Off-Road SUV</div></div>
+<div class="car-body">
+<div class="attribute"><span class="label">Engine</span><span class="value">2.2L Diesel</span></div>
+<div class="attribute"><span class="label">Power</span><span class="value">130 bhp</span></div>
+<div class="attribute"><span class="label">Torque</span><span class="value">300 Nm</span></div>
+<div class="attribute"><span class="label">Transmission</span><span class="value">6-Speed Manual / AT</span></div>
+<div class="attribute"><span class="label">Fuel</span><span class="value">Diesel</span></div>
+<div class="attribute"><span class="label">Seating</span><span class="value">4 Seater</span></div>
+</div></div>
+
+<div class="car-card">
+<div class="car-header"><div class="car-number">04 / SUV</div><h3>Tata Nexon</h3><div class="car-type">Compact SUV</div></div>
+<div class="car-body">
+<div class="attribute"><span class="label">Engine</span><span class="value">1.2L Turbo Petrol</span></div>
+<div class="attribute"><span class="label">Power</span><span class="value">120 bhp</span></div>
+<div class="attribute"><span class="label">Torque</span><span class="value">170 Nm</span></div>
+<div class="attribute"><span class="label">Transmission</span><span class="value">6-Speed Manual / AMT</span></div>
+<div class="attribute"><span class="label">Fuel</span><span class="value">Petrol / Diesel</span></div>
+<div class="attribute"><span class="label">Seating</span><span class="value">5 Seater</span></div>
+</div></div>
+
+<div class="car-card">
+<div class="car-header"><div class="car-number">05 / HATCHBACK</div><h3>Maruti Suzuki Swift</h3><div class="car-type">Hatchback</div></div>
+<div class="car-body">
+<div class="attribute"><span class="label">Engine</span><span class="value">1.2L Dualjet</span></div>
+<div class="attribute"><span class="label">Power</span><span class="value">90 bhp</span></div>
+<div class="attribute"><span class="label">Torque</span><span class="value">113 Nm</span></div>
+<div class="attribute"><span class="label">Transmission</span><span class="value">5-Speed Manual / AMT</span></div>
+<div class="attribute"><span class="label">Fuel</span><span class="value">Petrol</span></div>
+<div class="attribute"><span class="label">Seating</span><span class="value">5 Seater</span></div>
+</div></div>
+
+<div class="car-card">
+<div class="car-header"><div class="car-number">06 / SUV</div><h3>Kia Seltos</h3><div class="car-type">Compact SUV</div></div>
+<div class="car-body">
+<div class="attribute"><span class="label">Engine</span><span class="value">1.5L Petrol</span></div>
+<div class="attribute"><span class="label">Power</span><span class="value">115 bhp</span></div>
+<div class="attribute"><span class="label">Torque</span><span class="value">144 Nm</span></div>
+<div class="attribute"><span class="label">Transmission</span><span class="value">IVT / Manual</span></div>
+<div class="attribute"><span class="label">Fuel</span><span class="value">Petrol / Diesel</span></div>
+<div class="attribute"><span class="label">Seating</span><span class="value">5 Seater</span></div>
+</div></div>
+
+</div>
+
+<div class="highlight" id="about">
+<h2>About This Website</h2>
+<p>This static website has been designed as part of the BCA 5th Semester Cloud Computing Lab. It presents automobile information in a clean and responsive format using HTML and CSS.</p>
+</div>
+</main>
+
+<footer>
+<p class="developed">Developed by</p>
+<p class="names">Rishi Banga &amp; Daman</p>
+<p class="course">BCA 5th Semester | Cloud Computing Lab</p>
+<p class="github">Static Website • GitHub Pages</p>
+</footer>
+</body>
+</html>
